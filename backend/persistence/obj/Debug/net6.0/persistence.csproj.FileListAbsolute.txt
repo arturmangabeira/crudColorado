@@ -1,0 +1,17 @@
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/persistence.csproj.AssemblyReference.cache
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/persistence.GeneratedMSBuildEditorConfig.editorconfig
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/persistence.AssemblyInfoInputs.cache
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/persistence.AssemblyInfo.cs
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/persistence.csproj.CoreCompileInputs.cache
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/bin/Debug/net6.0/persistence.deps.json
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/bin/Debug/net6.0/persistence.runtimeconfig.json
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/bin/Debug/net6.0/persistence.dll
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/bin/Debug/net6.0/persistence.pdb
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/bin/Debug/net6.0/domain.dll
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/bin/Debug/net6.0/domain.pdb
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/persistence.csproj.CopyComplete
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/persistence.dll
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/refint/persistence.dll
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/persistence.pdb
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/persistence.genruntimeconfig.cache
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/persistence/obj/Debug/net6.0/ref/persistence.dll

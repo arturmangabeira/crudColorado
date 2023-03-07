@@ -1,0 +1,12 @@
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/obj/Debug/net6.0/domain.csproj.AssemblyReference.cache
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/obj/Debug/net6.0/domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/obj/Debug/net6.0/domain.AssemblyInfoInputs.cache
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/obj/Debug/net6.0/domain.AssemblyInfo.cs
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/obj/Debug/net6.0/domain.csproj.CoreCompileInputs.cache
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/bin/Debug/net6.0/domain.deps.json
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/bin/Debug/net6.0/domain.dll
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/bin/Debug/net6.0/domain.pdb
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/obj/Debug/net6.0/domain.dll
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/obj/Debug/net6.0/refint/domain.dll
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/obj/Debug/net6.0/domain.pdb
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/backend/domain/obj/Debug/net6.0/ref/domain.dll

@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Home Pages";    
+}
+
+<div class="signup-form">
+    <form class="cadastro" name="cadastro" action="" method="">
+		<h2 id="titleCadastro">Editar Cliente</h2>
+		<p>Favor preencha os campos abaixo!</p>
+		<hr>
+        <div class="form-group">
+			<div class="row">				
+				<div class="col-xs-6"><input type="text" class="form-control" disabled name="nome" placeholder="Nome" required="required"></div>
+			</div>        	
+        </div>
+        <div class="form-group">
+        	<input type="email" class="form-control" name="endereco" disabled placeholder="Endereco" required="required">
+        </div>
+		<div class="form-group">
+            <input type="text" class="form-control" name="cidade" disabled placeholder="Cidade" required="required">
+        </div>
+		<div class="form-group">
+            <input type="text" class="form-control" name="uf" disabled placeholder="UF" required="required">
+        </div>        		
+    </form>
+	<div class="hint-text"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a></div>
+</div>
+
+<script> 
+    $(document).ready(function(){
+        editarCliente(@ViewData["CodCliente"]);    
+    });
+</script>

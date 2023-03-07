@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Home Pages";
+}
+
+<div class="text-center">
+    <h1 class="display-4">CRUD Colorado</h1>    
+    <div>            
+    <div class="container">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-6"><h2>Lista de <b>Clientes</b></h2></div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="search-box col-sm-6">
+                                    <i class="material-icons">&#xE8B6;</i>
+                                    <input type="text" id="nomeCliente" class="form-control" placeholder="Search&hellip;"> 
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="/Home/Cadastrar" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Novo Cliente</span></a>                    
+                                </div>
+                            </div>                            
+                        </div>                        
+                    </div>                    
+                </div>
+                
+                <table class="table table-striped table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome <i class="fa fa-sort"></i></th>
+                            <th>Endereço</th>
+                            <th>Cidade <i class="fa fa-sort"></i></th>
+                            <th>UF</th>
+                            <th>Data Inserção <i class="fa fa-sort"></i></th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trCliente">
+                                                  
+                    </tbody>
+                </table>
+                <div class="clearfix">
+                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                        <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>            
+    </div>
+</div>
+</div>
+
+
