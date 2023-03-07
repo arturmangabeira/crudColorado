@@ -1,4 +1,5 @@
 ﻿namespace domain;
+
 public class Cliente
 {    
     public int CodigoCliente { get; set; }

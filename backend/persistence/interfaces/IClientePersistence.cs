@@ -1,9 +1,8 @@
 using domain;
 
-namespace persistence.interfaces
+namespace persistence.interfaces;
+
+public interface IClientePersistence : IRepository<Cliente>
 {
-    public interface IClientePersistence : IRepository<Cliente>
-    {
-        IEnumerable<Cliente> ObterCliente(string nome);        
-    }
+    IEnumerable<Cliente> ObterCliente(string nome);        
 }

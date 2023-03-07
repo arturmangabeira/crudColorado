@@ -1,4 +1,5 @@
 namespace application.models;
+
 public class ClienteModel
 {    
     public int CodigoCliente { get; set; }
