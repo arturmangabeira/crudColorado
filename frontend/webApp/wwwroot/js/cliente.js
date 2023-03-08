@@ -1,5 +1,3 @@
-const rotaCliente = "https://localhost:7227/Cliente";
-
 const rotaClienteMVC = "https://localhost:7218/Home";
 
 function obterTodosCliente()
@@ -116,7 +114,7 @@ function obterClientePorFiltro(pnome)
 function salvarCliente()
 {
     $("#btnCadastrar").on("click", function(){
-        let form = $("form.cadastro").serializeJSON();                
+        let form = $("form.cadastro").serialize();                
         enviarDadosClienteSalvar(form);
     }); 
 }
@@ -125,7 +123,7 @@ function editarCliente(codigoCliente)
 {
     obterClientePorCodigoCliente(codigoCliente);
     $("#btnEditar").on("click", function(){
-        let form = $("form.cadastro").serializeJSON();                
+        let form = $("form.cadastro").serialize();                
         enviarDadosClienteEditar(form);
     });
 }
@@ -134,10 +132,10 @@ function enviarDadosClienteSalvar(form)
 {
     $.ajax({ 
         type: 'POST', 
-        url: rotaCliente + "/inserir-cliente",
-        data: JSON.stringify(form),
+        url: rotaClienteMVC + "/inserir-cliente",
+        data: form,
         dataType: "json",
-        contentType: "application/json",                      
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',                      
         encode: true,        
         beforeSend: function (){
             $(".cadastro").LoadingOverlay("show");
@@ -173,11 +171,11 @@ function enviarDadosClienteSalvar(form)
 function enviarDadosClienteEditar(form)
 {    
     $.ajax({ 
-        type: 'PUT', 
-        url: rotaCliente + "/atualizar-cliente",
-        data: JSON.stringify(form),
+        type: 'POST', 
+        url: rotaClienteMVC + "/atualizar-cliente",
+        data: form,
         dataType: "json",
-        contentType: "application/json",                      
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',                      
         encode: true,        
         beforeSend: function (){
             $(".cadastro").LoadingOverlay("show");
@@ -214,8 +212,8 @@ function enviarDadosClienteEditar(form)
 function enviarDadosClienteExcluir(codigoCliente)
 {
     $.ajax({ 
-        type: 'DELETE', 
-        url: rotaCliente + "/excluir-cliente?codigoCliente=" + codigoCliente,        
+        type: 'POST', 
+        url: rotaClienteMVC + "/excluir-cliente?codigoCliente=" + codigoCliente,        
         dataType: 'json',
         beforeSend: function (){
             $(".table").LoadingOverlay("show");
@@ -242,7 +240,7 @@ function obterClientePorCodigoCliente(codigoCliente)
 {
     $.ajax({ 
         type: 'GET', 
-        url: rotaCliente + "/obter-cliente-por-codigo-cliente",
+        url: rotaClienteMVC + "/obter-cliente-por-codigo-cliente",
         data: {CodigoCliente: codigoCliente},         
         dataType: 'json',
         beforeSend: function (){

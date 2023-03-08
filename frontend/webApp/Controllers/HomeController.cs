@@ -25,9 +25,40 @@ public class HomeController : Controller
     }
 
     [Route("Home/obter-cliente-por-filtro")]
-    public async Task<IActionResult> ObterTodos(string nome)
+    public async Task<IActionResult> ObterClientePorFiltro(string nome)
     {
         var clientes = await _service.ObterClientePorFiltro(nome);
+        return Json(clientes);
+    }
+
+    [Route("Home/obter-cliente-por-codigo-cliente")]
+    public async Task<IActionResult> ObterClientePorCodigoCliente(int codigoCliente)
+    {
+        var clientes = await _service.ObterClientePorCodigoCliente(codigoCliente);
+        return Json(clientes);
+    }
+
+    [HttpPost]
+    [Route("Home/inserir-cliente")]
+    public async Task<IActionResult> InserirCliente(ClienteModel clienteModel)
+    {
+        
+        var clientes = await _service.InserirCliente(clienteModel);
+        return Json(clientes);
+    }
+
+    [HttpPost]
+    [Route("Home/atualizar-cliente")]
+    public async Task<IActionResult> AtualizarCliente(ClienteModel clienteModel)
+    {        
+        var clientes = await _service.AtualizarCliente(clienteModel);
+        return Json(clientes);
+    }
+
+    [Route("Home/excluir-cliente")]
+    public async Task<IActionResult> ExcluirCliente(int codigoCliente)
+    {
+        var clientes = await _service.ExcluirCliente(codigoCliente);
         return Json(clientes);
     }
 
