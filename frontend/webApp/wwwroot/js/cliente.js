@@ -1,10 +1,10 @@
-const rotaCliente = "http://localhost:5238/Cliente";
+const rotaCliente = "https://localhost:7218/Home";
 
 function obterTodosCliente()
 {
     $.ajax({ 
         type: 'GET', 
-        url: rotaCliente + "/obter-todos-cliente",         
+        url: rotaCliente + "/obter-todos",         
         dataType: 'json',
         beforeSend: function (){
             $(".table").LoadingOverlay("show");

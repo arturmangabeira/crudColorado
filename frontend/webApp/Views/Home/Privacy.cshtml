@@ -4,3 +4,21 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+<div>
+    @model IEnumerable<webApp.Models.ClienteModel>
+        
+    <table class="table table-striped table-hover table-bordered">
+    @foreach (var cliente in Model)
+    {
+        <tr>
+            <td>#</td>
+            <td>@cliente.Nome <i class="fa fa-sort"></i></td>
+            <td>@cliente.Endereco</td>
+            <td>@cliente.Cidade <i class="fa fa-sort"></i></td>
+            <td>@cliente.UF</td>
+            <td>@cliente.DataInsercao <i class="fa fa-sort"></i></td>                
+        </tr>
+    }
+    </table>
+</div>
