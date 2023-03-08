@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EOlplMckw3Sf+v0RROU6xzCdJcb2GJeEcEE2KUdhoGYeP8lKacnliN4H0JIJtjkvr6NWvCF+uxgxtFCiWjaeLA==",
+  "dgSpecHash": "mhM43ThN7n4yQbPLQa+JcMQNNs2IR8Vw5D4y3+cSUOPB8Gz4cC44gystnFvxiNUHi9PuXmF+/+OAzwkiILoUTA==",
   "success": true,
   "projectFilePath": "/home/arturmangabeira/Workspace/dotNET/CrudColorado/frontend/webApp/webApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/arturmangabeira/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

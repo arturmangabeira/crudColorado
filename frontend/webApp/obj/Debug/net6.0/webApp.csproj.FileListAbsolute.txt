@@ -50,3 +50,5 @@
 /home/arturmangabeira/Workspace/dotNET/CrudColorado/frontend/webApp/obj/Debug/net6.0/webApp.pdb
 /home/arturmangabeira/Workspace/dotNET/CrudColorado/frontend/webApp/obj/Debug/net6.0/webApp.genruntimeconfig.cache
 /home/arturmangabeira/Workspace/dotNET/CrudColorado/frontend/webApp/obj/Debug/net6.0/ref/webApp.dll
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/frontend/webApp/bin/Debug/net6.0/Newtonsoft.Json.dll
+/home/arturmangabeira/Workspace/dotNET/CrudColorado/frontend/webApp/obj/Debug/net6.0/webApp.csproj.CopyComplete
