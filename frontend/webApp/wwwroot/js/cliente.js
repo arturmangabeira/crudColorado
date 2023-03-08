@@ -1,10 +1,12 @@
-const rotaCliente = "https://localhost:7218/Home";
+const rotaCliente = "https://localhost:7227/Cliente";
+
+const rotaClienteMVC = "https://localhost:7218/Home";
 
 function obterTodosCliente()
 {
     $.ajax({ 
         type: 'GET', 
-        url: rotaCliente + "/obter-todos",         
+        url: rotaClienteMVC + "/obter-todos",         
         dataType: 'json',
         beforeSend: function (){
             $(".table").LoadingOverlay("show");
@@ -75,7 +77,7 @@ function obterClientePorFiltro(pnome)
 {
     $.ajax({ 
         type: 'GET', 
-        url: rotaCliente + "/obter-cliente-por-filtro",
+        url: rotaClienteMVC + "/obter-cliente-por-filtro",
         data: {nome: pnome},         
         dataType: 'json',
         beforeSend: function (){
