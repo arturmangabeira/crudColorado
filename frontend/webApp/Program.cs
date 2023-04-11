@@ -6,8 +6,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddHttpClient<IClienteService, ClienteService>(c =>
-    c.BaseAddress = new Uri("http://localhost:5238/"));
+//builder.Services.AddScoped<IBaseHttpClientService, BaseHttpClientService>();
+
+builder.Services.AddHttpClient<IBaseRestService, BaseRestService>();
+
+/*builder.Services.AddHttpClient<IBaseRestService, BaseRestService>(c =>
+    c.BaseAddress = new Uri("http://localhost:5238/"));*/    
+
+builder.Services.AddScoped<IClienteService, ClienteService>();
 
 var app = builder.Build();
 

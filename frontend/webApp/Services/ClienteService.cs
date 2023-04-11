@@ -2,67 +2,46 @@ namespace webApp.Services;
 using Models;
 using Services.Interfaces;
 using webApp.Helpers;
+using webApp.Configurations;
 using Newtonsoft.Json;
 using System.Text;
+using Microsoft.Extensions.Options;
 
-public class ClienteService : IClienteService
+public class ClienteService : BaseHttpClientService<ClienteModel>, IClienteService
 {
-
-    private readonly HttpClient _client;
-    public ClienteService(HttpClient client)
+    private readonly HttpClient _client;        
+    public ClienteService(HttpClient client, IConfiguration configuration): base(client, configuration)
     {
         _client = client;
     }
 
     public async Task<IEnumerable<ClienteModel>> ObterTodos()
     {
-        var response = await _client.GetAsync("/Cliente/obter-todos-cliente");
-
-        return await response.ReadContentAsync<List<ClienteModel>>();
+        return await SendGetAll<ClienteModel>("/Cliente/obter-todos-cliente");
     }
 
     public async Task<IEnumerable<ClienteModel>> ObterClientePorFiltro(string nome)
-    {
-        var response = await _client.GetAsync("/Cliente/obter-cliente-por-filtro?nome=" + nome);
-
-        return await response.ReadContentAsync<List<ClienteModel>>();
+    {       
+        return await SendGetAll<ClienteModel>("/Cliente/obter-cliente-por-filtro?nome=" + nome);
     }
 
     public async Task<ClienteModel> ObterClientePorCodigoCliente(int codigoCliente)
     {
-        var response = await _client.GetAsync("/Cliente/obter-cliente-por-codigo-cliente?codigoCliente=" + codigoCliente);
-
-        return await response.ReadContentAsync<ClienteModel>();
+        return await SendGet<ClienteModel>("/Cliente/obter-cliente-por-codigo-cliente?codigoCliente=" + codigoCliente);     
     }
 
-    public async Task<string> InserirCliente(ClienteModel clienteModel)
-    {
-        var response = await _client.SendAsync(
-            new HttpRequestMessage(HttpMethod.Post,
-                                   "/Cliente/inserir-cliente") 
-                                   { Content = new StringContent(JsonConvert.SerializeObject(clienteModel), Encoding.UTF8, "application/json") }
-        );
-
-        return await response.Content.ReadAsStringAsync();
+    public async Task<ClienteModel> InserirCliente(ClienteModel clienteModel)
+    {        
+       return await SendPost<ClienteModel>("/Cliente/inserir-cliente", clienteModel);     
     }
 
-    public async Task<string> AtualizarCliente(ClienteModel clienteModel)
-    {
-        var response = await _client.SendAsync(
-            new HttpRequestMessage(HttpMethod.Put,
-                                   "/Cliente/atualizar-cliente") { Content = new StringContent(JsonConvert.SerializeObject(clienteModel), Encoding.UTF8, "application/json") }
-        );
-
-        return await response.Content.ReadAsStringAsync();
+    public async Task<ClienteModel> AtualizarCliente(ClienteModel clienteModel)
+    {        
+       return await SendPut<ClienteModel>("/Cliente/atualizar-cliente", clienteModel);
     }
 
-    public async Task<string> ExcluirCliente(int codigoCliente)
+    public async Task<ClienteModel> ExcluirCliente(int codigoCliente)
     {
-        var response = await _client.SendAsync(
-            new HttpRequestMessage(HttpMethod.Delete,
-                                   "/Cliente/excluir-cliente?codigoCliente=" + codigoCliente)
-        );
-
-        return await response.Content.ReadAsStringAsync();
+       return await SendDelete<ClienteModel>("/Cliente/excluir-cliente?codigoCliente=" + codigoCliente);
     }
 }

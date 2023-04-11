@@ -9,9 +9,9 @@ public interface IClienteService
 
     Task<ClienteModel> ObterClientePorCodigoCliente(int nome);
 
-    Task<string> InserirCliente(ClienteModel clienteModel);
+    Task<ClienteModel> InserirCliente(ClienteModel clienteModel);
 
-    Task<string> AtualizarCliente(ClienteModel clienteModel);
+    Task<ClienteModel> AtualizarCliente(ClienteModel clienteModel);
 
-    Task<string> ExcluirCliente(int codigoCliente);
+    Task<ClienteModel> ExcluirCliente(int codigoCliente);
 }
